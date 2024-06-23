@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="converter-container">
+        <h1>Currency Converter</h1>
+        <form id="converter-form">
+            <div class="currency-field">
+                <label for="usd">USD:</label>
+                <input type="number" id="usd" name="usd" oninput="convertCurrency('usd')">
+            </div>
+            <div class="currency-field">
+                <label for="eur">EUR:</label>
+                <input type="number" id="eur" name="eur" oninput="convertCurrency('eur')">
+            </div>
+            <div class="currency-field">
+                <label for="gbp">GBP:</label>
+                <input type="number" id="gbp" name="gbp" oninput="convertCurrency('gbp')">
+            </div>
+            <div class="currency-field">
+                <label for="cad">CAD:</label>
+                <input type="number" id="cad" name="cad" oninput="convertCurrency('cad')">
+            </div>
+        </form>
+        <h2>Conversion Table</h2>
+        <table id="conversion-table">
+            <thead>
+                <tr>
+                    <th>Currency</th>
+                    <th>USD</th>
+                    <th>EUR</th>
+                    <th>GBP</th>
+                    <th>CAD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>USD</th>
+                    <td id="usd-usd">1</td>
+                    <td id="usd-eur"></td>
+                    <td id="usd-gbp"></td>
+                    <td id="usd-cad"></td>
+                </tr>
+                <tr>
+                    <th>EUR</th>
+                    <td id="eur-usd"></td>
+                    <td id="eur-eur">1</td>
+                    <td id="eur-gbp"></td>
+                    <td id="eur-cad"></td>
+                </tr>
+                <tr>
+                    <th>GBP</th>
+                    <td id="gbp-usd"></td>
+                    <td id="gbp-eur"></td>
+                    <td id="gbp-gbp">1</td>
+                    <td id="gbp-cad"></td>
+                </tr>
+                <tr>
+                    <th>CAD</th>
+                    <td id="cad-usd"></td>
+                    <td id="cad-eur"></td>
+                    <td id="cad-gbp"></td>
+                    <td id="cad-cad">1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="all_Scripts/convertScript.js"></script>
+</body>
+</html>
